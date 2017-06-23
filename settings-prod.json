@@ -1,0 +1,18 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "YOUR MONGO PATH HERE",
+      "MONGO_OPLOG_URL": "YOUR OPLOG PATH HERE"
+    }
+  },
+  "public": {
+    "ga": {
+      "account":"YOUR GOOGLE ANALYTICS ACCOUNT HERE"
+    },
+    "BASE_URL": "WWW.YOURSITE.COM",
+    "MAIL_GUN_PUB_KEY": "MG KEY HERE"
+  },
+  "private": {
+    "SMTP_URL": "SMTP PATH HERE"
+  }
+}

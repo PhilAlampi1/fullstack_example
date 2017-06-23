@@ -1,0 +1,16 @@
+{
+  "name": "Fullstack Example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "production": "YOUR PROD HOST PATH HERE --settings settings-prod.json",
+    "test": "YOUR TEST HOST PATH HERE --settings settings-test.json"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "bcrypt": "^1.0.2",
+    "fuzzball": "^0.11.6",
+    "mailgun-validate": "^0.1.0",
+    "meteor-node-stubs": "^0.2.6"
+  }
+}

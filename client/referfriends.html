@@ -1,0 +1,71 @@
+<template name="referfriends">
+  <div class="big-view">
+    <div class="img-inner">
+      <div class="image">
+        <img src="background2.jpg" alt="Image">
+        <div class="home-inner center">
+          <h3>Thank you for signing up!</h3>
+          <h1>Refer a friend and get $15 cash</h1>
+          <p class="lead shad">Share your referal link below via email, Facebook, Twitter and LinkedIn. For each friend you refer who becomes a customer, you'll receive the first $15 they spend in our product in cash and they will get a $15 credit.</p>
+          <hr>
+          <p class="lead">Send friends your referral link*:</p>
+          <div class="text-black">
+            <input class="center" type="text" size="50" value="{{getReferralLink}}">
+          </div>
+          <br>
+          <p class="lead shad">Or click to share on these services*:</p>
+          <div class="inline">
+            <a target="_blank" href="{{fbLink}}">
+              <img src="facebook.png" align="middle" style="max-width:64px; max-height:64px;">
+            </a>
+            <a target="_blank" href="{{twitterLink}}">
+              <img src="twitter.png" align="middle" style="max-width:64px; max-height:64px;">
+            </a>
+            <a target="_blank" href="{{liLink}}">
+              <img src="linkedin.png" align="middle" style="max-width:64px; max-height:64px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="small-view">
+    <div class="center imageitup2">
+      <div class="throwshade">
+        <div class="marg-it-up">
+          <br>
+          <h3 class="nomarg">Thank you for signing up!</h3>
+          <h1>Refer a friend and get $15 cash</h1>
+          <p class="lead shad">Share your referal link below via email, Facebook, Twitter and LinkedIn. For each friend you refer who becomes a customer, you'll receive the first $15 they spend in our product in cash and they will get a $15 credit.</p>
+          <hr>
+          <p class="lead">Send friends your referral link*:</p>
+          <p>{{getReferralLink}}</p>
+          <br>
+          <p>Or click to share on these services*:</p>
+          <div class="inline">
+            <a target="_blank" href="{{fbLink}}">
+              <img src="facebook.png" align="middle" style="max-width:64px; max-height:64px;">
+            </a>
+            <a target="_blank" href="{{twitterLink}}">
+              <img src="twitter.png" align="middle" style="max-width:64px; max-height:64px;">
+            </a>
+            <a target="_blank" href="{{liLink}}">
+              <img src="linkedin.png" align="middle" style="max-width:64px; max-height:64px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <p class="text-center">*By participating in the referral program, you agree to the Referral Program Terms and Conditions below</p>
+  </div>
+  {{> referralterms}}
+</template>
+
+<template name="referralterms">
+  <div id ="terms" class="marg-it-up">
+    <h2 class="text-center">Referral Program Terms and Conditions</h2>
+    <p>ENTER YOUR REFERRAL PROGRAM TERMS AND CONDITIONS HERE</p>
+  </div>
+</template>

@@ -1,0 +1,9 @@
+{
+  "public": {
+    "BASE_URL": "http://localhost:3000",
+    "MAIL_GUN_PUB_KEY": "MG KEY HERE"
+  },
+  "private": {
+    "SMTP_URL": "SMTP PATH HERE"
+  }
+}

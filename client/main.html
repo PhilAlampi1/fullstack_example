@@ -1,0 +1,184 @@
+<head>
+  <title>Waitlist With Referral Incentive</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- OpenGraph Tags - Replace og:image with your own -->
+  <meta property="og:title" content="Waitlist With Referral Incentive" />
+  <meta property="og:description" content="Waitlist example with conditional cash incentives for referrals" />
+  <meta property="og:url" content="URL where hosted"/>
+  <meta property="og:image" content="https://preview.ibb.co/kcSqNa/fb_Background1.jpg" />
+
+  <link rel='icon' href= '/public/favicon.ico'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+</body>
+
+<template name="layout">
+  <header>
+    {{> Template.dynamic template=top}}
+  </header>
+  {{> Template.dynamic template=main}}
+  <footer id="footer">
+    {{> Template.dynamic template=bottom}}
+  </footer>
+</template>
+
+<template name="navbar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid marg-it-up">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">YOUR LOGO</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Beta User Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<template name="home">
+  {{#if referred}}
+  <div class="bg-black">
+    <div class="center">
+      <br>
+      <p class="req-field"><strong>Thanks for taking {{referralPersonName}}'s advice to sign up! Claim your $15 credit by filling out the form below.</strong></p>
+    </div>
+  </div>
+  {{/if}}
+  <div class="big-view">
+    <section>
+      <div class="img-inner">
+        <div class="image">
+          <img src="background.jpg" alt="Image">
+          <div class="home-inner center">
+            <h1>YOUR PRODUCT is coming soon</h1>
+            <p class="lead shad">This is an example fullstack web app for a waitlist landing page that includes an incentive to refer your friends. To help prevent fraud, only one submission is allowed per IP address and email address.</p>
+            <hr>
+            <p class="lead shad"><strong>Be the first to know when it's ready.</strong></p>
+            {{> insideraccess}}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="small-view">
+    <section class="bg-dark">
+      <div class="center imageitup">
+        <div class="throwshade">
+          <div class="paditup">
+            <br>
+            <h1>YOUR PRODUCT is coming soon</h1>
+            <p class="lead shad">This is an example fullstack web app for a waitlist landing page that includes an incentive to refer your friends. To help prevent fraud, only one submission is allowed per IP address and email address.</p>
+          </div>
+          <hr>
+          <p class="lead shad"><strong>Be the first to know when it's ready.</strong></p>
+          {{> insideraccess}}
+          <br>
+        </div>
+      </div>
+    </section>
+  </div>
+  <br>
+  {{> testimonials}}
+  <br><br>
+  <section class="bg-dark">
+    <br>
+    <div class="center-div-custom">
+      {{> insideraccess}}
+    </div>
+    <br>
+  </section>
+</template>
+
+<template name="footer">
+  <footer class="container-fluid text-center">
+    <div class="inline">
+      <a href="/terms">Terms</a>
+      &nbsp;
+      <a href="/privacy">Privacy</a>
+      &nbsp;
+      <a href="mailto:YOUR_EMAIL_ADDRESS">Email Us</a>
+      &nbsp;
+      <p class="inline">&copy; YOUR COMPANY NAME</p>
+    </div>
+  </footer>
+</template>
+
+<template name="testimonials">
+  <section id="testimonials">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">What beta users are saying</h2>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="lead shad center"><em>“This product has really helped me - changed my whole workday! Would highly recommend.”</em></p>
+          <div class="col-sm-5"></div>
+          <div class="col-sm-2 center">
+            <img src="placeholder.png" alt="Beta User Picture 1" align="middle">
+          </div>
+          <div class="col-sm-5"></div>
+          <br><br>
+          <div class="col-sm-12 center">
+            <p class="lead shad center"><strong><em>- Beta User 1, Company Name</em></strong></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="lead shad center"><em>“This is a lifesaver! Not sure how we survived before this product - we love it!”</em></p>
+          <div class="col-sm-5"></div>
+          <div class="col-sm-2 center">
+            <img src="placeholder.png" alt="Beta User Picture 1" align="middle">
+          </div>
+          <div class="col-sm-5"></div>
+          <br><br>
+          <div class="col-sm-12 center">
+            <br>
+            <p class="lead shad center"><strong><em>- Beta User 2, Company Name</em></strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<template name="insideraccess">
+  <div class="form-center">
+    {{#autoForm collection="InsiderSignups" id="insertInsiderForm" type="insert"}}
+    <div class="center">
+      <fieldset id="insiderFieldset">
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-4">
+          {{> afQuickField name='isFirstName'}}
+        </div>
+        <div class="col-md-5">
+          {{> afQuickField name='isEmail'}}
+        </div>
+        <div class="col-md-3">
+          <br>
+          <button type="submit" id="btninsidersubmit" class="btn btn-danger"><span class="shad center">STAY INFORMED</span></button>
+        </div>
+      </fieldset>
+    </div>
+    {{/autoForm}}
+  </div>
+</template>
