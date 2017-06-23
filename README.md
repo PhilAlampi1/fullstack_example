@@ -6,6 +6,11 @@ This is a waitlist landing page for new startup ideas and new products. It was i
 
 Since most of us are making software, not physcial products we can give away, this implementation is a little different from Harry's launch. This landing page incents people to share the news through email and social media sites by offering $15 cash for each successful referral (read: people that become paying customers after launch) and a $15 product credit to each new customer. This way everyone gets something from the interaction and all parties are incented to keep sharing. Keep in mind the web app can be configured for any incentive, it doesn't have to be the one currently shown.
 
+# Getting Started
+First make sure you have Meteor installed locally. If not, see here to do the deed: https://www.meteor.com/install
+
+Clone or download this repo to your local machine. Navigate to the fullstack_example directory in command line and enter: meteor run --settings settings-dev.json. After Meteor starts up, you can view the app at http://localhost:3000/ in your browser. I highly recommend using Dr. Mongo or a similar tool to gain transparancy into your Mongo DB: https://github.com/DrMongo/DrMongo. You'll need it for tweaking the data as you play with the app (e.g. changing the IP address recorded for a new sign-ups in the database so you can submit more sign-ups from the same IP, same with email addresses, etc.).
+
 # Key Features
 1 - Social Proof -
 The main landing page has an area for beta user testimonials. Assuming you are close to product-market fit with your beta users, this area can be used to show off how your work so far has helped them.
